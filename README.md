@@ -12,5 +12,6 @@ A project to play tic tac toe game using eithe both the players as Human or one 
 
 ## Class diagram
 
-![Uploading image.png…]()
+![image](https://github.com/deepak1410/tic_tac_toe_game/assets/4659585/9503e5a5-f32f-4d29-869b-379b4bae7c31)
+
 
