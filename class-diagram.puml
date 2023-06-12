@@ -1,0 +1,62 @@
+@startuml
+interface PlayerStrategy {
+    +makeMove()
+}
+
+class HumanPlayerStrategy {
+    +makeMove()
+}
+
+
+class ComputerPlayerStrategy {
+    +makeMove()
+    +findWinningMove() : Optional<List<Integer>>
+    +findRandomMove() : List<Integer>
+}
+
+class TicTacToeClient {
+    +makeMove()
+}
+
+class GameController {
+    +start()
+    +playGame()
+}
+
+class GameUtils {
+    +isWinningMove(char[][] board, int row, int col)
+    +printBoard(char[][] board)
+}
+
+interface GameService {
+    +start()
+    +makeMove(int row, int col)
+    +printBoard()
+    +isValidMove(int row, int col):boolean
+    +getBoard():char[][]
+}
+
+class TicTacToeServiceImpl {
+    +switchPlayer()
+    +updateScoreBoard(int row, int col)
+    +isBoardFull()
+}
+
+class ScoreBoard {
+}
+
+enum Player {
+    -PLAYER_X
+    -PLAYER_O
+}
+
+
+PlayerStrategy <|-- HumanPlayerStrategy
+PlayerStrategy <|-- ComputerPlayerStrategy
+
+GameService <|-- TicTacToeServiceImpl
+
+GameController *-- GameService
+GameController o-- PlayerStrategy
+TicTacToeServiceImpl o-- ScoreBoard
+@enduml

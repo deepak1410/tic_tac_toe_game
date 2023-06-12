@@ -8,7 +8,7 @@ public class HumanPlayerStrategy implements PlayerStrategy {
 
     @Override
     public void makeMove(GameService gameService) {
-        System.out.println(gameService.getCurrentPlayer().name()
+        System.out.println(gameService.getScoreBoard().getCurrentPlayer().name()
                 + " enter your move row and column (0-" + (DIMENSION - 1) + ") separated by space.:");
 
         Scanner scanner = new Scanner(System.in);

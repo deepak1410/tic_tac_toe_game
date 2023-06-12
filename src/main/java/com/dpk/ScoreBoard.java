@@ -5,7 +5,7 @@ import java.util.List;
 public class ScoreBoard {
     private Player currentPlayer;
     private int remainingMoves;
-    private GameStatus status;
+    private GameStatus status = GameStatus.NOT_STARTED;
     private List<Player> winners;
 
     public ScoreBoard(Player currentPlayer, int remainingMoves, GameStatus status, List<Player> winners) {
@@ -31,11 +31,23 @@ public class ScoreBoard {
         this.remainingMoves = remainingMoves;
     }
 
+    public void decrementRemainingMovesByOne() {
+        this.remainingMoves--;
+    }
+
     public GameStatus getStatus() {
         return status;
     }
 
     public void setStatus(GameStatus status) {
         this.status = status;
+    }
+
+    public List<Player> getWinners() {
+        return winners;
+    }
+
+    public void setWinners(List<Player> winners) {
+        this.winners = winners;
     }
 }

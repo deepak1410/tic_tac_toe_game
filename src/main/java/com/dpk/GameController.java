@@ -32,7 +32,7 @@ public class GameController {
         while (isGameOn()) {
             gameService.printBoard();
 
-            if(gameService.getCurrentPlayer() == PLAYER_X) {
+            if(gameService.getScoreBoard().getCurrentPlayer() == PLAYER_X) {
                 player1Strategy.makeMove(gameService);
             } else {
                 player2Strategy.makeMove(gameService);
@@ -43,7 +43,7 @@ public class GameController {
     }
 
     private boolean isGameOn() {
-        return gameService.getGameStatus() == GameStatus.ON;
+        return gameService.getScoreBoard().getStatus() == GameStatus.ON;
     }
 
 }

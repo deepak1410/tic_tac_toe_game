@@ -10,7 +10,7 @@ public class ComputerPlayerStrategy implements PlayerStrategy {
 
     @Override
     public void makeMove(GameService gameService) {
-        System.out.println(gameService.getCurrentPlayer().name() + " enters the move");
+        System.out.println(gameService.getScoreBoard().getCurrentPlayer().name() + " enters the move");
 
         // Add a small delay in computer's move to sync with human
         delay();
@@ -31,7 +31,8 @@ public class ComputerPlayerStrategy implements PlayerStrategy {
     private Optional<List<Integer>> findWinningMove(GameService gameService) {
         for (int row = 0; row < DIMENSION; row++) {
             for (int col = 0; col < DIMENSION; col++) {
-                if (gameService.isValidMove(row, col) && GameUtils.isWinningMove(gameService.getBoard(), row, col, gameService.getCurrentPlayer().getMark())) {
+                if (gameService.isValidMove(row, col)
+                        && GameUtils.isWinningMove(gameService.getBoard(), row, col, gameService.getScoreBoard().getCurrentPlayer().getMark())) {
                     return Optional.of(List.of(row, col));
                 }
             }
