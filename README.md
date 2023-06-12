@@ -8,7 +8,7 @@ A project to play tic tac toe game using eithe both the players as Human or one 
 
 ## How to customise
 - To customise the default configurations, update ApplicationConstants accordingly.
-- Customisation is allowed for the selection of second player (human or computer) and Board dimention
+- Customisation is allowed for the selection of second player (human or computer) and Board dimension
 
 ## Class diagram
 
