@@ -1,6 +1,5 @@
 package com.dpk;
 
-import static com.dpk.Player.PLAYER_O;
 import static com.dpk.Player.PLAYER_X;
 
 public class GameController {
@@ -22,9 +21,6 @@ public class GameController {
     }
 
     public void start() {
-        System.out.println("Tic-Tac-Toe Game");
-        System.out.println("Player 1: " + PLAYER_X.name());
-        System.out.println("Player 2: " + PLAYER_O.name());
         gameService.start();
     }
 

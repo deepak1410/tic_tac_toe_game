@@ -1,5 +1,6 @@
 package com.dpk;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 import static com.dpk.ApplicationConstants.DIMENSION;
@@ -21,6 +22,10 @@ public class HumanPlayerStrategy implements PlayerStrategy {
                 System.out.println("Invalid move. Please try again.");
             }
         } catch (Exception ex) {
+            if(Objects.equals(scanner.next(), "q")) {
+                System.out.println("Terminating the game");
+                System.exit(0);
+            }
             System.out.println("Invalid Input. Please try again.");
         }
 

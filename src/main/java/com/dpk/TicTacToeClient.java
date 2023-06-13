@@ -13,7 +13,10 @@ public class TicTacToeClient {
         gameController.setPlayer2Strategy(COMPUTER_PLAYER_ENABLED ? new ComputerPlayerStrategy() : new HumanPlayerStrategy());
 
         // Start and play the Game
-        gameController.start();
-        gameController.playGame();
+        while (true) {
+            gameController.start();
+            gameController.playGame();
+        }
+
     }
 }

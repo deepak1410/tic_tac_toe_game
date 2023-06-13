@@ -16,6 +16,8 @@ public class TicTacToeServiceImpl implements GameService {
     @Override
     public void start() {
         System.out.println("Starting tic tac toe game");
+        System.out.println("Player 1: " + PLAYER_X.name());
+        System.out.println("Player 2: " + PLAYER_O.name());
         initialiseBoard();
         initialiseScoreBoard();
     }
@@ -53,11 +55,12 @@ public class TicTacToeServiceImpl implements GameService {
         checkGameStatus();
         if (GameUtils.isWinningMove(board, row, col)) {
             System.out.println("Player " + scoreBoard.getCurrentPlayer().name() + " wins!");
-            scoreBoard.setStatus(GameStatus.COMPLETED);
+            scoreBoard.setStatus(GameStatus.COMPLETED_BY_WIN);
             scoreBoard.setWinners(List.of(scoreBoard.getCurrentPlayer()));
+            scoreBoard.setRemainingMoves(0);
         } else if (isBoardFull()) {
             System.out.println("It's a DRAW!");
-            scoreBoard.setStatus(GameStatus.COMPLETED);
+            scoreBoard.setStatus(GameStatus.COMPLETED_BY_DRAW);
             scoreBoard.setWinners(List.of(PLAYER_X, PLAYER_O));
         } else {
             switchPlayer();
@@ -87,9 +90,9 @@ public class TicTacToeServiceImpl implements GameService {
 
     private void checkGameStatus() {
         if(scoreBoard == null || scoreBoard.getStatus() == GameStatus.NOT_STARTED) {
-            throw new TicTackToeException("The game has not started");
-        } else if(scoreBoard.getStatus() == GameStatus.COMPLETED) {
-            throw new TicTackToeException("The game has finished");
+            throw new TicTacToeException("The game has not yet started");
+        } else if(scoreBoard.getStatus() == GameStatus.COMPLETED_BY_WIN || scoreBoard.getStatus() == GameStatus.COMPLETED_BY_DRAW) {
+            throw new TicTacToeException("The game has finished");
         }
     }
 
