@@ -1,6 +1,10 @@
 # tic_tac_toe_game
 A project to play tic tac toe game using eithe both the players as Human or one player as human and the other player as Computer
 
+# Approaches
+- Approach-1 is a comprehensive solution which allows a human to play the game with either another human or computer.
+- Approach-2 is a simple solution to check if a player has won the game or is it draw.
+
 
 ## How to run
 - Import the project in an IDE
