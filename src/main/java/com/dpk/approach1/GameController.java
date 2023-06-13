@@ -1,6 +1,6 @@
-package com.dpk;
+package com.dpk.approach1;
 
-import static com.dpk.Player.PLAYER_X;
+import static com.dpk.approach1.Player.PLAYER_X;
 
 public class GameController {
 

@@ -1,13 +1,13 @@
-package com.dpk;
+package com.dpk.approach1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.dpk.ApplicationConstants.DIMENSION;
-import static com.dpk.ApplicationConstants.VACANT;
-import static com.dpk.Player.PLAYER_O;
-import static com.dpk.Player.PLAYER_X;
+import static com.dpk.approach1.ApplicationConstants.DIMENSION;
+import static com.dpk.approach1.ApplicationConstants.VACANT;
+import static com.dpk.approach1.Player.PLAYER_O;
+import static com.dpk.approach1.Player.PLAYER_X;
 
 public class TicTacToeServiceImpl implements GameService {
     private char[][] board;

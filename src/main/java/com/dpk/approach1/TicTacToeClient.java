@@ -1,6 +1,6 @@
-package com.dpk;
+package com.dpk.approach1;
 
-import static com.dpk.ApplicationConstants.COMPUTER_PLAYER_ENABLED;
+import static com.dpk.approach1.ApplicationConstants.COMPUTER_PLAYER_ENABLED;
 
 public class TicTacToeClient {
 

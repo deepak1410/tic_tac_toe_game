@@ -1,9 +1,9 @@
-package com.dpk;
+package com.dpk.approach1;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-import static com.dpk.ApplicationConstants.DIMENSION;
+import static com.dpk.approach1.ApplicationConstants.DIMENSION;
 
 public class HumanPlayerStrategy implements PlayerStrategy {
 

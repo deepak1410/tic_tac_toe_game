@@ -1,6 +1,6 @@
-package com.dpk;
+package com.dpk.approach1;
 
-import static com.dpk.ApplicationConstants.DIMENSION;
+import static com.dpk.approach1.ApplicationConstants.DIMENSION;
 
 public class GameUtils {
 

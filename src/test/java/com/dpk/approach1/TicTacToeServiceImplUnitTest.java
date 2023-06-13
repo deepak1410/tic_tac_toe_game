@@ -1,5 +1,11 @@
-package com.dpk;
+package com.dpk.approach1;
 
+import com.dpk.approach1.GameService;
+import com.dpk.approach1.GameStatus;
+import com.dpk.approach1.Player;
+import com.dpk.approach1.ScoreBoard;
+import com.dpk.approach1.TicTacToeException;
+import com.dpk.approach1.TicTacToeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

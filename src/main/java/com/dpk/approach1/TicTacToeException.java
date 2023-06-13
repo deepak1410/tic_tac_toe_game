@@ -1,4 +1,4 @@
-package com.dpk;
+package com.dpk.approach1;
 
 /**
  * Custom exception class to throw specific exceptions

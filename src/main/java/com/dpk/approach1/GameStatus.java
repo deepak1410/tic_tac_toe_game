@@ -1,4 +1,4 @@
-package com.dpk;
+package com.dpk.approach1;
 
 public enum GameStatus {
     NOT_STARTED("not_started"),

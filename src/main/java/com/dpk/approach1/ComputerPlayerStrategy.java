@@ -1,10 +1,10 @@
-package com.dpk;
+package com.dpk.approach1;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
-import static com.dpk.ApplicationConstants.DIMENSION;
+import static com.dpk.approach1.ApplicationConstants.DIMENSION;
 
 public class ComputerPlayerStrategy implements PlayerStrategy {
 

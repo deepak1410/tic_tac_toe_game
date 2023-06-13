@@ -1,4 +1,4 @@
-package com.dpk;
+package com.dpk.approach1;
 
 public enum Player {
     PLAYER_X('X'),
